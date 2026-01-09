@@ -1,0 +1,194 @@
+/**
+ * Astro-inspired theme for Airbeeps
+ */
+
+:root {
+  /* Brand colors */
+  --vp-c-brand-1: #4f46e5;
+  --vp-c-brand-2: #6366f1;
+  --vp-c-brand-3: #818cf8;
+  --vp-c-brand-soft: rgba(79, 70, 229, 0.14);
+  
+  /* Light theme */
+  --vp-c-bg: #ffffff;
+  --vp-c-bg-soft: #f9fafb;
+  --vp-c-bg-mute: #f3f4f6;
+  
+  --vp-home-hero-name-color: #ffffff;
+  --vp-home-hero-name-background: transparent;
+}
+
+.dark {
+  /* Dark theme colors */
+  --vp-c-bg: #0f172a;
+  --vp-c-bg-soft: #1e293b;
+  --vp-c-bg-mute: #334155;
+  
+  --vp-home-hero-name-color: #ffffff;
+}
+
+/**
+ * Navbar styling - always has background
+ */
+.VPNav {
+  background-color: var(--vp-c-bg) !important;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+.VPNav.has-sidebar {
+  background-color: var(--vp-c-bg) !important;
+}
+
+/**
+ * Buttons - simple solid colors
+ */
+:root {
+  --vp-button-brand-border: transparent;
+  --vp-button-brand-text: #fff;
+  --vp-button-brand-bg: #3b82f6;
+  --vp-button-brand-hover-border: transparent;
+  --vp-button-brand-hover-text: #fff;
+  --vp-button-brand-hover-bg: #2563eb;
+  --vp-button-brand-active-border: transparent;
+  --vp-button-brand-active-text: #fff;
+  --vp-button-brand-active-bg: #1d4ed8;
+}
+
+/**
+ * Home page
+ */
+:root {
+  --vp-home-hero-name-background: transparent;
+}
+
+/**
+ * Hero section with gradient background
+ */
+.VPHome {
+  padding: 0 !important;
+}
+
+.VPHero {
+  padding: 100px 24px 120px !important;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.VPHero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3), transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(138, 93, 168, 0.3), transparent 50%);
+  pointer-events: none;
+}
+
+.VPHero .container {
+  max-width: 1152px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.VPHero .main {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.VPHero .name,
+.VPHero .text {
+  text-align: center;
+  margin: 0 auto;
+  color: #ffffff !important;
+}
+
+.VPHero .name {
+  font-size: 56px !important;
+  line-height: 1.2 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em;
+}
+
+.VPHero .text {
+  font-size: 56px !important;
+  line-height: 1.2 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em;
+}
+
+.VPHero .tagline {
+  text-align: center;
+  margin: 24px auto 0 !important;
+  padding-left: 0;
+  padding-right: 0;
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 20px !important;
+  line-height: 1.6 !important;
+  max-width: 700px;
+}
+
+.VPHero .actions {
+  justify-content: center;
+  padding-top: 40px;
+  gap: 16px;
+  position: relative;
+  z-index: 10;
+}
+
+/* Install command box under the buttons */
+.install-command {
+  margin-top: 48px;
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 18px 32px;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+  font-size: 15px;
+  color: #e2e8f0;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.VPFeatures {
+  padding: 80px 24px !important;
+  background: var(--vp-c-bg);
+}
+
+.VPFeatures .container {
+  max-width: 1152px;
+}
+
+/**
+ * Clean feature cards
+ */
+.VPFeature {
+  border: 1px solid var(--vp-c-bg-mute);
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  padding: 24px;
+}
+
+.VPFeature:hover {
+  border-color: var(--vp-c-brand-1);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.dark .VPFeature:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
