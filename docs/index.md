@@ -47,7 +47,7 @@ All data (database, files, vectors) stored locally with no external dependencies
 
 | Layer | Technology |
 |-------|------------|
-| Backend | FastAPI, SQLAlchemy, Alembic, LangChain, LiteLLM |
+| Backend | FastAPI, SQLAlchemy, Alembic, LlamaIndex, LiteLLM |
 | Vector Store | ChromaDB (embedded or server mode) |
 | Frontend | Nuxt 3, Vue 3, TailwindCSS, Reka UI |
 | Auth | FastAPI Users (JWT, OAuth) |
